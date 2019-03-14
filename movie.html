@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	
+<title>Movie Ticket</title>
+	
+<link rel="shortcut icon" href="dash.ico">
+
+
+
+<link rel="stylesheet" type="text/css" href="contactus/style.css">  
+<div id="bg"></div>
+<div class="contact">
+	<div class="envelope">
+		<div class="top">
+			<div class="outer"><div class="inner"></div></div>
+		</div>
+		<div class="bottom"></div>
+		<div class="left"></div>
+		<div class="right"></div>
+		<div class="cover"></div>
+		<div class="paper">
+			<a class="call" href="Phone:8898585555"><div class="i"></div>8898585555</a>
+			<a class="mail" href="mailto:moviesnow@gmail.com"><div class="i"></div>moviesnow@gmail.com</a>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+	
+<script src="jquery.min.js"></script>
+	
+<style>
+
+	
+td  
+{
+
+text-align:center;
+
+color:navy;
+
+font-size : 40px;
+}
+table
+{
+background-color:#a04619;
+}
+
+</style>
+
+<script>
+
+
+city= ["Select your city","Pune","Hyderabad","Mumbai"];
+
+Pune= ["Select Cinema","Delight","Miraj","Moti"];
+Delight= ["Select Movie","Dark_Knight","Faster"];
+Miraj= ["Select Movie","Inception","Spartons"];
+	
+Moti= ["Select Movie","Iron_Man","Skyfall"];
+
+	
+Mumbai = ["Select Cinema","Capitol","Reagol","Maratha"];
+	
+Capitol= ["Select Movie","Pirates","Wolverine"];
+	
+Reagol     = ["Select Movie","Avatar","Part"];
+	
+Maratha    = ["Select Movie","Justice_League","The_Mummy"];
+
+	
+Hyderabad  = ["Select Cinema","Imax","PVR","PVS"];
+	
+Imax       = ["Select Movie","World_War","Kongens"];
+	
+PVR        = ["Select Movie","Iron_Sky","Total_Recall"];
+	
+PVS        = ["Select Movie","Resident_Evil","Guardians_Galaxy"];
+
+ShowTiming = ["Select Show Timing","11AM","3PM","9PM"];
+	
+	
+className  = ["Select Class","Silver","Gold","Platinum"];
+	
+	
+function bodyload()
+	
+{
+		
+lstCity = document.getElementById("lstCity");
+		
+var sel = document.createElement("select");
+		
+for(var i=0; i<city.length; i++)
+		
+{
+			
+var opt   = document.createElement("option");
+			
+opt.text  = city[i];
+			
+opt.value = city[i];
+			
+sel.appendChild(opt);
+		
+}
+		
+sel.id = "cityId";
+		
+lstCity.appendChild(sel);
+	
+}
+
+	
+function ShowCinema()
+	
+{
+		
+lstCity   = document.getElementById("cityId");
+		
+lstCinema = document.getElementById("lstCinema");
+		
+var sel   = document.createElement("select");
+		
+sel.id    = "cinemaId";
+		
+switch(lstCity.value)
+		
+{
+			
+case "Pune":
+			
+lstCinema.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Pune.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Pune[i];
+				
+opt.value = Pune[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Mumbai":
+			
+lstCinema.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Mumbai.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Mumbai[i];
+				
+opt.value = Mumbai[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break; 
+
+			
+case "Hyderabad":
+			
+lstCinema.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Hyderabad.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Hyderabad[i];
+				
+opt.value = Hyderabad[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+			
+default:
+			
+lstCinema.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+alert("Please Select City");
+			
+break;
+		
+}
+		
+lstCinema.appendChild(sel);
+	
+}
+
+	
+function ShowMovie()
+	
+{
+		
+lstCinema = document.getElementById("cinemaId");
+		
+lstMovie  = document.getElementById("lstMovie");
+		
+var sel   = document.createElement("select");
+		
+sel.id    = "movieId";
+		
+switch(lstCinema.value)
+		
+{
+			
+case "Delight":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Delight.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Delight[i];
+				
+opt.value = Delight[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Miraj":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Miraj.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Miraj[i];
+				
+opt.value = Miraj[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Moti":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Moti.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Moti[i];
+				
+opt.value = Moti[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Capitol":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Capitol.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Capitol[i];
+				
+opt.value = Capitol[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Reagol":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Reagol.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Reagol[i];
+				
+opt.value = Reagol[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Maratha":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Maratha.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Maratha[i];
+				
+opt.value = Maratha[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Imax":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<Imax.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = Imax[i];
+				
+opt.value = Imax[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "PVR":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<PVR.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = PVR[i];
+				
+opt.value = PVR[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "PVS":
+			
+lstPrice.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+lstClass.innerHTML  = "";
+			
+lstMovie.innerHTML  = "";
+			
+for(var i=0; i<PVS.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = PVS[i];
+				
+opt.value = PVS[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+			
+default:
+			
+lstMovie.innerHTML  = "";
+			
+lstTiming.innerHTML = "";
+			
+alert("Please Select Cinema");
+			
+lstPrice.innerHTML ="";
+			
+break;
+		
+}
+		
+lstMovie.appendChild(sel);
+	
+}
+
+	
+function showTiming()
+	
+{
+
+		
+pic       = document.getElementById("pic");
+		
+lstMovie  = document.getElementById("movieId");
+		
+lstTiming = document.getElementById("lstTiming");
+		
+var sel   = document.createElement("select");
+		
+sel.id    = "timeId";
+		
+switch(lstMovie.value)
+		
+{
+			
+case "Dark_Knight":
+			
+pic.src = "images/batman.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Faster":
+			
+pic.src = "images/faster.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+
+				opt.text  = ShowTiming[i];
+
+				opt.value = ShowTiming[i];
+
+				sel.appendChild(opt);
+			
+}
+			
+break;
+
+
+case "Inception":
+pic.src= "images/inception.jpg";
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Spartons":
+
+			
+pic.src= "images/spartans.jpg";
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Iron_Man":
+			
+pic.src= "images/ironman.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+
+case "Skyfall":
+			
+pic.src= "images/skyfall.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Pirates":
+			
+pic.src= "images/pirates.jpg";
+
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Wolverine":
+			
+pic.src= "images/wolverine.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Avatar":
+			
+pic.src= "images/avatar.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Part":
+			
+pic.src= "images/mvi10.jpg";
+
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+			
+break;
+
+			
+case "Justice_League":
+			
+pic.src= "images/justice.jpg";
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+				
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				
+opt.value = ShowTiming[i];
+				
+sel.appendChild(opt);
+			
+}
+
+break;
+
+
+case "The_Mummy":
+
+pic.src= "images/mummy.jpg";
+			
+lstTiming.innerHTML = "";
+			
+lstPrice.innerHTML  = "";
+			
+lstClass.innerHTML  = "";
+			
+for(var i=0; i<ShowTiming.length; i++)
+			
+{
+
+var opt   = document.createElement("option");
+				
+opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "World_War":
+			pic.src             = "images/worldwar.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "Kongens":
+			pic.src             = "images/kongens.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "Iron_Sky":
+			pic.src             = "images/ironsky.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "Total_Recall":
+			pic.src             = "images/total.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "Resident_Evil":
+			pic.src             = "images/resident.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			case "Guardians_Galaxy":
+			pic.src             = "images/galaxy.jpg";
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			for(var i=0; i<ShowTiming.length; i++)
+			{
+				var opt   = document.createElement("option");
+				opt.text  = ShowTiming[i];
+				opt.value = ShowTiming[i];
+				sel.appendChild(opt);
+			}
+			break;
+
+			default:
+			alert("Please Select Movie");
+			lstTiming.innerHTML = "";
+			lstPrice.innerHTML  = "";
+			lstClass.innerHTML  = "";
+			break;
+		}
+		lstTiming.appendChild(sel);
+	}
+
+	function ShowClass()
+	{
+		lstTiming = document.getElementById("timeId");
+		lstClass  = document.getElementById("lstClass");
+		var sel   = document.createElement("select");
+		sel.id    = "classId";
+		for(var i=0; i<className.length; i++)
+		{
+			var opt            = document.createElement("option");
+			lstPrice.innerHTML = "";
+			lstClass.innerHTML = "";
+			opt.text           = className[i];
+			opt.value          = className[i];
+			sel.appendChild(opt);
+		}
+		lstClass.appendChild(sel);
+	}
+
+	function ShowPrice()
+	{
+		lstClass = document.getElementById("classId");
+		lstPrice = document.getElementById("lstPrice");
+		switch(lstClass.value)
+		{
+			case "Gold":
+			lstPrice.innerHTML = 200;
+			lstPrice.value     = 200;
+			break;
+
+			case "Platinum":
+			lstPrice.innerHTML = 300;
+			lstPrice.value     = 300;
+			break;
+
+			case "Silver":
+			lstPrice.innerHTML = 100;
+			lstPrice.value     = 100;
+			break;
+
+			default:
+			lstPrice.innerHTML = "";
+			lstPrice.value     = 0;
+			document.getElementById("details").style.display = "none";	
+			break;
+		}
+	}
+
+
+	function ShowDetails()
+	{	
+		cinema           = document.getElementById("cinema");
+		mname            = document.getElementById("mname");
+		timing           = document.getElementById("timing");
+		sclass           = document.getElementById("sclass");
+		count            = document.getElementById("count");
+		amount           = document.getElementById("amount");
+		cinema.innerHTML = lstCinema.value;
+		mname.innerHTML  = lstMovie.value;
+		timing.innerHTML = lstTiming.value;
+		sclass.innerHTML = lstClass.value;
+		count.innerHTML  = lstCount.value;
+		amount.innerHTML = ((lstPrice.value)*(lstCount.value));
+
+		if(lstPrice.value==100 || lstPrice.value==200 || lstPrice.value==300)
+			document.getElementById("details").style.display = "block";	
+		else
+			alert("Please fill all details correctly.");
+	}
+
+</script>
+
+</head>
+
+<body onload="bodyload()" background="Movies.jpg">
+
+<form>
+
+<table border="1" align="center" width="1000">
+			
+<marquee><tr>
+<td colspan="3" bgcolor="orange">
+<marquee behavior="alternate">
+<h2>Book Movie Ticket Online</h2></marquee></td>
+			
+</tr>
+
+<tr>
+<td>Select   City</td>
+<td id="lstCity" onchange="ShowCinema()">
+</td>
+<td rowspan="4" id="poster">
+<img src="venom.jpg" alt="Coming Soon" width="400" height="400" id="pic"></td>
+			
+</tr>
+			
+<tr>
+<td>Select Cinema</td>
+<td id="lstCinema" onchange="ShowMovie()"></td>
+			
+</tr>
+			
+<tr>
+<td>Select  Movie</td>
+<td id="lstMovie" onchange="showTiming()"></td>
+			
+</tr>
+			
+<tr>
+<td>Show   Timing</td>
+<td id="lstTiming" onchange="ShowClass()"></td>
+			
+</tr>
+			
+<tr>
+<td>Select  Class</td><td id="lstClass" onchange="ShowPrice()"></td>
+<td rowspan="4" id="details" style="display:none;">
+
+				
+<table border="2" width="500">
+					
+<tr><td>Cinema</td><td id="cinema"></td>
+				
+</tr>
+					
+<tr><td>Movie Name</td><td id="mname"></td>
+					
+</tr>
+					
+<tr>
+<td>Movie Timing</td><td id="timing"></td>
+					
+</tr>
+					
+<tr><td>Moive Class</td><td id="sclass"></td>
+					
+</tr>
+					
+<tr><td>No. Of Seats</td><td id="count"></td>
+					
+</tr>
+					
+<tr><td>Total Amount</td><td id="amount"></td>
+					
+</tr>
+					
+<tr><td colspan="2"><input type="button" value="Book Ticket" name="btnSubmit" id="btnSubmit"</td>
+</tr>
+				
+</table>
+			
+</td>
+		
+</tr>
+		
+<tr><td>Ticket Price</td>
+<td id="lstPrice"></td>
+		
+</tr>
+		
+<tr>
+<td>No. Of Seats</td>
+<td><input type="number" id="lstCount" name="lstCount" min="1" max="5" value="2"></td>
+		
+</tr>
+		
+<tr><td colspan="2"><input type="button" value="Continue" name="btn" id="btn" onclick="ShowDetails()"></td>
+
+
+
+
+
+
+
+
+</marquee>
+
+</table>
+	
+</form>
+
+</body>
+
+</html>
